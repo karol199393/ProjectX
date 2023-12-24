@@ -14,9 +14,9 @@ public class RegisterController {
     RegisterController(RegisterService registerService){
         this.registerService=registerService;
     }
-@PostMapping("/register")
-    public User register(@Valid @RequestBody User user){
-        registerService.Register(user);
+    @PostMapping("/register")
+    public User register(@RequestBody User user){
+        registerService.register(user);
         return user;
 }
 }
