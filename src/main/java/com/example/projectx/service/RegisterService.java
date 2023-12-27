@@ -1,11 +1,11 @@
 package com.example.projectx.service;
 
 import com.example.projectx.dto.User;
-import com.example.projectx.validator.Validator;
+import com.example.projectx.validator.Validate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RegisterService extends Validator {
+public class RegisterService implements Validate {
 
     public User register(User user) {
         validateName(user.getName());
